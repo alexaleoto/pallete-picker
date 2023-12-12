@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palette Picker</title>
+    <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+    <h1>Palette Picker</h1>
+    <div id="app">
+        <div class="palette-form">
+            <h2>Add a Palette</h2>
+            <form id="palette-form">
+                <div class="form-group">
+                    <label for="palette-title">Palette Title:</label>
+                    <input type="text" id="palette-title" required />
+                </div>
+                <div class="form-group">
+                    <label for="color1">Color #1:</label>
+                    <input type="color" id="color1" required />
+                </div>
+                <div class="form-group">
+                    <label for="color2">Color #2:</label>
+                    <input type="color" id="color2" required />
+                </div>
+                <div class="form-group">
+                    <label for="color3">Color #3:</label>
+                    <input type="color" id="color3" required />
+                </div>
+                <div class="form-group">
+                    <label>Temperature:</label>
+                    <div>
+                        <input type="radio" id="warm" name="temperature" value="warm" required />
+                        <label for="warm">Warm</label>
+                        <input type="radio" id="neutral" name="temperature" value="neutral" />
+                        <label for="neutral">Neutral</label>
+                        <input type="radio" id="cool" name="temperature" value="cool" />
+                        <label for="cool">Cool</label>
+                    </div>
+                </div>
+                <button type="submit">Create the palette</button>
+            </form>
+        </div>
+
+        <h2>Palettes</h2>
+        <div id="palettes-section" class="palette-container">
+            <!-- Palettes will be dynamically generated here -->
+        </div>
+      </div>
+      <button id="undo-button" style="display: none;">Undo Delete</button>
+  </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
